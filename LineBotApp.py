@@ -3,7 +3,7 @@ import os
 import traceback
 import json
 from datetime import datetime
-from linebot.v3.webhook import WebhookHandler
+from linebot import WebhookHandler
 from linebot.v3.messaging import MessagingApi
 from linebot.v3.messaging.configuration import Configuration
 from linebot.v3.messaging.api_client import ApiClient
