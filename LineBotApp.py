@@ -3,7 +3,7 @@ import os
 import traceback
 import json
 from datetime import datetime
-from linebot import WebhookHandler
+from linebot.v3.webhook import WebhookHandler
 from linebot.v3.messaging import MessagingApi
 from linebot.v3.messaging.configuration import Configuration
 from linebot.v3.messaging.api_client import ApiClient
@@ -77,7 +77,7 @@ class LineBotApp:
 
     @classmethod
     def run(cls):
-        cls.app.run()
+        cls.app.run(host='0.0.0.0', port=5000, debug=True)
 
 if __name__ == "__main__":
     LineBotApp.run()
